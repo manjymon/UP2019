@@ -510,7 +510,7 @@ int scope_check(int argument)
 ### 01. Given 3 sides, calculate the perimeter of a triangle
 
 ```c++
-double triangle_perimeter(int a, int b, int c)
+double triangle_perimeter(double a, double b, double c)
 {
     return a + b + c;
 }

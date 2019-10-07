@@ -1,4 +1,4 @@
-# Ex01 = Types, Operators and Pure Functions
+# Ex01 - Types, Operators and Pure Functions
 
 ## Hello World / General structure of a program
 
@@ -17,7 +17,7 @@ int main() // Every program starts from the main function
 {
     std::cout << "Hello World" << '\n';
     // std:: something that belongs to the std namespace
-    // cout - (console output), a stream object that can be used to write on the console
+    // cout - (standard character output, console by default), a stream object that can be used to write on the console
     // << - binary operator for adding data TO a stream
 
     // std::endl -> (endline), outputs a new line and flushes the buffer
@@ -49,7 +49,17 @@ std::cout << "text"; return 0; // BAD
 std::cout << "text";
 return 0; // GOOD
 ```
+- Use either spaces (usually 4) or tabs for identation but be consistent
+```c++
+int main()
+{
+    statement1();
+     statement2(); // BAD, different number of spaces
+	statement3(); // BAD, mixed tabs and spaces
 
+    return 0;
+}
+```
 - main should be int and not void
 https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#f46-int-is-the-return-type-for-main
 
@@ -63,9 +73,9 @@ https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#f46
 - variable: a named object
 - identifier: name of a variable
 
-#### Naming Conventions
+#### Notes
 
-- Names can contains letters, underscores and numbers (but cannot start with a number)
+- Names can contains letters, underscores and digits (but cannot start with a digit)
 - Names starting with underscores should be avoided most of the times (mostly used in the standard library)
 - Names should begin with a lower case letter
 ```c++
@@ -145,8 +155,6 @@ std::cout << sizeof(int) << '\n'; // Should output 4 on your machine
 ### unsigned
 - a non-negative integer
 - size is usually the same as int
-- literals
-
 
 ### double
 - floating point number
@@ -170,12 +178,12 @@ https://randomascii.wordpress.com/2012/02/25/comparing-floating-point-numbers-20
 
 ### char
 - always 1 byte
-- contains a number between 0 and 255 that is mapped to a character using a what's called ASCII table
+- contains a number between 0 and 255 that is mapped to a character using what's called an ASCII table
 http://www.asciitable.com/
 - literals
 ```c++
 char a{'a'}; // one character in single quotes
-char b{'b'}; // special charactes are created using \
+char b{'\n'}; // special charactes are created using \
 ```
 
 ### bool
@@ -292,7 +300,7 @@ This is actually a really hard topic that we will gloss over
 int a{};
 std::cin >> a;
 
-// cin -> console input stream object
+// cin -> standard character input stream object
 // >> -> stream operator that takes data from a stream and puts it in an object
 ```
 
@@ -301,7 +309,7 @@ std::cin >> a;
 int a{20};
 std::cout << a;
 
-// cout -> console output stream object
+// cout -> standard character output stream object
 // >> -> stream operator that takes an object and serializes it to a stream
 ```
 
@@ -350,11 +358,11 @@ double triangle_perimeter(int a, int b, int c)
 ```c++
 unsigned digits_sum(int number)
 {
-    unsigned digits = number % 10;
+    unsigned ones = number % 10;
     unsigned tens = number / 10 % 10;
     unsigned hundreds = number / 100;
 
-    return digits + tens + hundreds
+    return ones + tens + hundreds
 }
 ```
 
@@ -369,18 +377,17 @@ HINT: Use the perimeter function to make it more readable
 
 ### 02b. Given 3 sides, calculate the area of a triangle
 
-HINT 1: Reuse the function in 01b
+HINT 1: Reuse the function in 01b \
 HINT 2: Try to use the cmath library https://en.cppreference.com/w/cpp/header/cmath
 
 ### 03b. Given 2 3-digit numbers, check if the product of their digits is equal
 
 HINT: Write as many functions as needed
 
-### 04b. Given an integer and a divisor return the smallest integer equal or bigger than the given one that is divisible by the divisor
+### 04b. Given an integer and a divisor return the smallest integer equal to or bigger than the given one that is divisible by the divisor
 
 e.g. round(10, 3) -> 12; round(12, 3) -> 12
 
 HINT: Use the different kinds of division
 
 ### 05b (hard?). Given 2 integers return the bigger one
-

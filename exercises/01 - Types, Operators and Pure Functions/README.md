@@ -546,10 +546,14 @@ HINT 2: Try to use the cmath library https://en.cppreference.com/w/cpp/header/cm
 
 HINT: Write as many functions as needed
 
-### 04b. Given an integer and a divisor return the smallest integer equal to or bigger than the given one that is divisible by the divisor
+### 04b. Given a 3-digit positive number, return the reverse on
+
+e.g. reverse(123) -> 321
+
+### 05b. Given an integer and a divisor return the smallest integer equal to or bigger than the given one that is divisible by the divisor
 
 e.g. round(10, 3) -> 12; round(12, 3) -> 12
 
 HINT: Use the different kinds of division
 
-### 05b (hard?). Given 2 integers return the bigger one
+### 06b (hard?). Given 2 integers return the bigger one

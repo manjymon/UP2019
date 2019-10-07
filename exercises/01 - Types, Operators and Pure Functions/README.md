@@ -516,9 +516,9 @@ double triangle_perimeter(double a, double b, double c)
 }
 ```
 
-### 02. Given a 3-digit number, calculate the sum of its digits 
+### 02. Given a 3-digit positive number, calculate the sum of its digits 
 ```c++
-unsigned digits_sum(int number)
+unsigned digits_sum(unsigned number)
 {
     unsigned ones = number % 10;
     unsigned tens = number / 10 % 10;
@@ -542,7 +542,7 @@ HINT: Use the perimeter function to make it more readable
 HINT 1: Reuse the function in 01b \
 HINT 2: Try to use the cmath library https://en.cppreference.com/w/cpp/header/cmath
 
-### 03b. Given 2 3-digit numbers, check if the product of their digits is equal
+### 03b. Given 2 3-digit positive numbers, check if the product of their digits is equal
 
 HINT: Write as many functions as needed
 

@@ -30,13 +30,13 @@ Given the coordinates of the center of a circle, the length of its radius and th
 enum class RelativePosition
 {
     INSIDE,
-    OUTSIDE,
     ON_BORDER,
+    OUTSIDE,
 };
 
 RelativePosition get_position(double x_circle, double y_circle,
-                               double radius,
-                               double x_point, double y_point)
+                              double radius,
+                              double x_point, double y_point)
 {
     double squared_distance{(x_circle - x_point) * (x_circle - x_point) +
                             (y_circle - y_point) * (y_circle - y_point)};
@@ -50,10 +50,10 @@ RelativePosition get_position(double x_circle, double y_circle,
 
     if (squared_distance == squared_radius)
     {
-        return RelativePosition::OUTSIDE;
+        return RelativePosition::ON_BORDER;
     }
 
-    return RelativePosition::ON_BORDER;
+    return RelativePosition::OUTSIDE;
 }
 ```
 

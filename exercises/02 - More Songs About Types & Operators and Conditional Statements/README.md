@@ -200,4 +200,84 @@ int f2(bool cond)
 }
 ```
 
-## More to come ...
+### ternary conditional operator
+
+- The only ternary (3 operands) operator
+- Checks is the first operand is true or false and depending on the result evaluates and returns either the second (if the first is true) or the third (if the first is false)
+
+```c++
+condition ? value_if_true : value_if_false;
+
+// e.g.
+
+a < b ? a : b; // min(a, b)
+```
+
+- Avoid nesting ternary operators
+```c++
+a == b ? "equal" : a < b ? "lesser" : "greater"; // BAD, Hard to read, should probably be an if or a switch 
+```
+
+### switch
+
+Transfer control to one of many statements depending on a condition
+
+```c++
+switch (integral_type_condition)
+{
+    case constant_expression_1:
+        // Execution will start here if integral_type_condition == constant_expression_1
+    case constant_expression_2:
+        // Execution will start here if integral_type_condition == constant_expression_2
+    default:
+        // Execution will start here if none of the above constant_expressions are equal to the condition
+}
+```
+
+Adding ```break``` in a statement will prevent the following cases from executing
+
+```c++
+switch (integral_type_condition)
+{
+    case constant_expression_1:
+        // Execution will start here if integral_type_condition == constant_expression_1
+        break; // Execution will stop here
+    case constant_expression_2:
+        // Execution will start here if integral_type_condition == constant_expression_2
+        break; // Execution will stop here
+    default:
+        // Execution will start here if none of the above constant_expressions are equal to the condition
+        // No need to break here
+}
+```
+
+You can group cases
+
+```c++
+switch (integral_type_condition)
+{
+    case constant_expression_1:
+    case constant_expression_2:
+        // Execution will start here if integral_type_condition is equal to either constant_expresison 1 or 2
+        break; // Execution will stop here
+    default:
+        // Execution will start here if none of the above constant_expressions are equal to the condition
+        // No need to break here
+}
+```
+
+- Always break after non-emmpty / non-default cases https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#es78-always-end-a-non-empty-case-with-a-break
+
+- Prefer switch to if when possible https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#es70-prefer-a-switch-statement-to-an-if-statement-when-there-is-a-choice
+
+- Use default to handle non-common cases https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#es79-use-default-to-handle-common-cases-only
+
+- In C++17 you can initilize variables in the condition to limit their scope
+
+```c++
+switch (int condition = get_value(); condition)
+{
+    // ...
+    // condition is visible only here
+}
+```

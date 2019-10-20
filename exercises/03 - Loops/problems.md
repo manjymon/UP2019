@@ -26,7 +26,7 @@ Given an integer, output all of its prime factors
 
 **Example**: \
 **Input**: \
-24
+24 \
 **Output**: \
 2 3
 
@@ -50,7 +50,7 @@ Given an integer, output it as a product of prime numbers
 
 **Example**: \
 **Input**: \
-24
+24 \
 **Output**: \
 2 * 2 * 2 * 3
 
@@ -60,20 +60,20 @@ Given a non-negative integer n followed by n other integers, find the maximum po
 
 **Example 1**: \
 **Input**: \
-8
--2 -3 4 -1 -2 1 5 -3
+8 \
+-2 -3 4 -1 -2 1 5 -3 \
 **Output**: \
-7
+7 \
 **Explanation**: \
 4 + (-1) + (-2) + 1 + 5 = 7
 If we try to expand the sequence in either direction we will add negative numbers, thus reducing the sum.
 
 **Example 2**: \
 **Input**: \
-3
--1 -4 -10
+3 \
+-1 -4 -10 \
 **Output**: \
-0
+0 \
 **Explanation**: \
 Every element is negative so we don't take any of them. (Sum of no elements is 0)
 

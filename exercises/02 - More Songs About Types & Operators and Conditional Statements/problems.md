@@ -31,7 +31,7 @@ const double EPSILON = 0.001;
 
 double compare_doubles(double a, double b, double eps)
 {
-    double delta = a - b;
+    double delta{a - b};
     return !(std::fabs(delta) < eps) * delta;
 }
 
@@ -51,7 +51,7 @@ PointToFigureRelation get_relation_to_circle(double x_circle, double y_circle,
 
     double squared_radius{radius * radius};
 
-    double delta = compare_doubles(squared_distance, squared_radius, EPSILON);
+    double delta{compare_doubles(squared_distance, squared_radius, EPSILON)};
 
     if (delta < 0)
     {

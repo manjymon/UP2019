@@ -5,7 +5,7 @@ const double EPSILON = 0.001;
 
 double compare_doubles(double a, double b, double eps)
 {
-    double delta = a - b;
+    double delta{a - b};
     return !(std::fabs(delta) < eps) * delta;
 }
 
@@ -25,7 +25,7 @@ PointToFigureRelation get_relation_to_circle(double x_circle, double y_circle,
 
     double squared_radius{radius * radius};
 
-    double delta = compare_doubles(squared_distance, squared_radius, EPSILON);
+    double delta{compare_doubles(squared_distance, squared_radius, EPSILON)};
 
     if (delta < 0)
     {
@@ -67,10 +67,10 @@ PointToFigureRelation get_relation_to_rectangle(double x_bottom, double y_bottom
                                                 double x_top, double y_top,
                                                 double x_point, double y_point)
 {
-    double delta_x_bottom = compare_doubles(x_point, x_bottom, EPSILON);
-    double delta_x_top = compare_doubles(x_point, x_top, EPSILON);
-    double delta_y_bottom = compare_doubles(y_point, y_top, EPSILON);
-    double delta_y_top = compare_doubles(y_point, y_bottom, EPSILON);
+    double delta_x_bottom{compare_doubles(x_point, x_bottom, EPSILON)};
+    double delta_x_top{compare_doubles(x_point, x_top, EPSILON)};
+    double delta_y_bottom{compare_doubles(y_point, y_top, EPSILON)};
+    double delta_y_top{compare_doubles(y_point, y_bottom, EPSILON)};
 
     if (delta_x_bottom > 0 && delta_x_top < 0 && delta_y_bottom > 0 && delta_y_top < 0)
     {

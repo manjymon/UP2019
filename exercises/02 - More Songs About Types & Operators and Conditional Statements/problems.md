@@ -27,33 +27,43 @@ bool exclusive_or(bool a, bool b)
 Given the coordinates of the center of a circle, the length of its radius and the coordinates of another point, return whether the function is inside, outside or on the circle.
 
 ```c++
-enum class RelativePosition
+const double EPSILON = 0.001;
+
+double compare_doubles(double a, double b, double eps)
+{
+    double delta = a - b;
+    return !(std::fabs(delta) < eps) * delta;
+}
+
+enum class PointToFigureRelation
 {
     INSIDE,
     ON_BORDER,
     OUTSIDE,
 };
 
-RelativePosition get_position(double x_circle, double y_circle,
-                              double radius,
-                              double x_point, double y_point)
+PointToFigureRelation get_relation_to_circle(double x_circle, double y_circle,
+                                             double radius,
+                                             double x_point, double y_point)
 {
     double squared_distance{(x_circle - x_point) * (x_circle - x_point) +
                             (y_circle - y_point) * (y_circle - y_point)};
 
     double squared_radius{radius * radius};
 
-    if (squared_distance < squared_radius)
+    double delta = compare_doubles(squared_distance, squared_radius, EPSILON);
+
+    if (delta < 0)
     {
-        return RelativePosition::INSIDE;
+        return PointToFigureRelation::INSIDE;
     }
 
-    if (squared_distance == squared_radius)
+    if (delta == 0)
     {
-        return RelativePosition::ON_BORDER;
+        return PointToFigureRelation::ON_BORDER;
     }
 
-    return RelativePosition::OUTSIDE;
+    return PointToFigureRelation::OUTSIDE;
 }
 ```
 

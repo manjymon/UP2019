@@ -1,4 +1,13 @@
 #include <iostream>
+#include <cmath>
+
+const double EPSILON = 0.001;
+
+double compare_doubles(double a, double b, double eps)
+{
+    double delta = a - b;
+    return !(std::fabs(delta) < eps) * delta;
+}
 
 enum class PointToFigureRelation
 {
@@ -16,12 +25,14 @@ PointToFigureRelation get_relation_to_circle(double x_circle, double y_circle,
 
     double squared_radius{radius * radius};
 
-    if (squared_distance < squared_radius)
+    double delta = compare_doubles(squared_distance, squared_radius, EPSILON);
+
+    if (delta < 0)
     {
         return PointToFigureRelation::INSIDE;
     }
 
-    if (squared_distance == squared_radius)
+    if (delta == 0)
     {
         return PointToFigureRelation::ON_BORDER;
     }
@@ -56,12 +67,17 @@ PointToFigureRelation get_relation_to_rectangle(double x_bottom, double y_bottom
                                                 double x_top, double y_top,
                                                 double x_point, double y_point)
 {
-    if (x_point > x_bottom && x_point < x_top && y_point > y_bottom && y_point < y_top)
+    double delta_x_bottom = compare_doubles(x_point, x_bottom, EPSILON);
+    double delta_x_top = compare_doubles(x_point, x_top, EPSILON);
+    double delta_y_bottom = compare_doubles(y_point, y_top, EPSILON);
+    double delta_y_top = compare_doubles(y_point, y_bottom, EPSILON);
+
+    if (delta_x_bottom > 0 && delta_x_top < 0 && delta_y_bottom > 0 && delta_y_top < 0)
     {
         return PointToFigureRelation::INSIDE;
     }
 
-    if (x_point >= x_bottom && x_point <= x_top && y_point >= y_bottom && y_point <= y_top)
+    if (delta_x_bottom >= 0 && delta_x_top <= 0 && delta_y_bottom >= 0 && delta_y_top <= 0)
     {
         return PointToFigureRelation::ON_BORDER;
     }
@@ -71,5 +87,6 @@ PointToFigureRelation get_relation_to_rectangle(double x_bottom, double y_bottom
 
 int main()
 {
+    std::cout << (get_relation_to_circle(0, 0, 1, 0, 1) == PointToFigureRelation::ON_BORDER);
     return 0;
 }

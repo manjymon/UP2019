@@ -38,13 +38,17 @@ Given a non-negative integer n, return the nth Fibonacci number
 
 ## 08
 
-Given a non-negative integer n followed by n other numbers, check if the numbers form a monotonic sequence
+Given 2 natural numbers a and b, calculate their greatest common divisor
 
 ## 09
 
-Given a non-negative integer n followed by n other integers that form a sequence, find the length of the longest contiguous strictly increasing subsequence
+Given a non-negative integer n followed by n other numbers, check if the numbers form a monotonic sequence
 
 ## 10
+
+Given a non-negative integer n followed by n other integers that form a sequence, find the length of the longest contiguous strictly increasing subsequence
+
+## 11
 
 Given an integer, output it as a product of prime numbers
 
@@ -54,7 +58,7 @@ Given an integer, output it as a product of prime numbers
 **Output**: \
 2 * 2 * 2 * 3
 
-## 11
+## 12
 
 Given a non-negative integer n followed by n other integers, find the maximum possible sum of a contiguous subsequence.
 
@@ -77,10 +81,10 @@ If we try to expand the sequence in either direction we will add negative number
 **Explanation**: \
 Every element is negative so we don't take any of them. (Sum of no elements is 0)
 
-## 12
+## 13
 
 Given a positive integer and a number of iterations, approximate the square root of that integer using Newton's method.
 
-## 13
+## 14
 
 Given a non-negative integer n followed by n integers, one of which appears more than the rest of the combined return that number.

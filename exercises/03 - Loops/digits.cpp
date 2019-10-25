@@ -4,7 +4,7 @@ unsigned count_digits(int number)
 {
     if (!number)
     {
-        return 0;
+        return 1;
     }
 
     unsigned count{0};

@@ -187,7 +187,7 @@ unsigned size{partial_sum(arr, 0, 5,
 print(res, 0, size); // -> 0 1 3 6 10;
 ```
 
-## 11 - Ajdacent Difference
+## 11 - Adjacent Difference
 
 ```c++
 unsigned adjacent_difference(const int input_arr[], unsigned input_begin, unsigned input_end,
@@ -210,7 +210,7 @@ unsigned size{adjacent_difference(arr, 0, 5,
 print(res, 0, size); // -> 0 1 2 3 4;
 ```
 
-## 12 - Min Indec
+## 12 - Min Index
 
 ```c++
 unsigned min_index(const int arr[], unsigned begin, unsigned end);

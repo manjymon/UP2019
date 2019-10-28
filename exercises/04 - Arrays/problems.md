@@ -24,7 +24,7 @@ print(arr, 1, 3); // -> 1 2
 ## 02 - Reverse
 
 ```c++
-void reverse(int arr[], unsigned begin, unsigned);
+void reverse(int arr[], unsigned begin, unsigned end);
 ```
 
 Given a range revese the elements inside of it

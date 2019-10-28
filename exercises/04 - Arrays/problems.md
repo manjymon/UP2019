@@ -286,7 +286,24 @@ upper_bound(arr, 0, 4, 4); // -> 3 (5 is bigger)
 upper_bound(arr, 0, 4, 6); // -> 4 (no bigger element exists)
 ```
 
-## 16 - Insertion Sort
+## 16 - Binary Search
+
+```c++
+bool binary_search(const int arr[], unsigned begin, unsigned end, int element);
+```
+
+Given a **sorted** range and an element, check whether the range contains the element.
+
+### Example
+
+```c++
+int arr[]{0, 1, 2, 5};
+
+binary_search(arr, 0, 4, 5); // -> true
+binary_search(arr, 0, 4, 3); // -> false
+```
+
+## 17 - Insertion Sort
 
 ```c++
 void insertion_sort(int arr[], unsigned begin, unsigned end);

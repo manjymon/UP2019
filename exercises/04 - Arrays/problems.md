@@ -18,7 +18,7 @@ Print a given range
 
 ```c++
 int arr[]{0, 1, 2, 3, 4};
-print(arr, 1, 3); // -> 1 2 3
+print(arr, 1, 3); // -> 1 2
 ```
 
 ## 02 - Reverse
@@ -34,14 +34,14 @@ Given a range revese the elements inside of it
 ```c++
 int arr[]{0, 1, 2, 3, 4};
 reverse(arr, 1, 3);
-print(arr, 0, 5); // -> 0 3 2 1 4
+print(arr, 0, 5); // -> 0 2 1 3 4
 ```
 
 ## 03 - Copy
 
 ```c++
 unsigned copy(const int input_arr[], unsigned input_begin, unsigned input_end, 
-	          int output_arr[], unsigned output_begin);
+              int output_arr[], unsigned output_begin);
 ```
 
 Given one range and the beginning of another, copy the contents of the first one into the second.
@@ -56,7 +56,7 @@ int output[10]{};
 
 unsigned size{copy(input, 1, 3,
                    output, 0)};
-print(output, 0, size); // -> 1 2 3
+print(output, 0, size); // -> 1 2
 ```
 
 ## 04 - Rotate
@@ -105,7 +105,7 @@ Given an array, its size, an index inside of it and a interger, insert the given
 ### Example
 
 ```c++
-int arr[]{0, 1, 2, 3, 4};
+int arr[6]{0, 1, 2, 3, 4};
 unsigned new_size{insert(arr, 5, 2, 10)};
 
 print(arr, 0, new_size); // -> 0 1 10 2 3 4
@@ -161,7 +161,7 @@ int a[]{0, 1, 2, 3, 4};
 int b[]{5, 4, 2, 3, 1};
 
 inner_product(a, 0, 5,
-	          b, 5); // -> 21
+              b, 5); // -> 21
 ```
 
 ## 10 - Partial Sum

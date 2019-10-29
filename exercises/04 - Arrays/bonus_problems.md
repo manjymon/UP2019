@@ -80,17 +80,17 @@ print(arr, 0, 5); // -> 0 1 1 2 2
 ## 04 - Sieve of Eratosthenes
 
 ```c++
-unsigned sieve_100(int arr[], unsigned begin);
+unsigned sieve_10000(int arr[], unsigned begin);
 ```
 
-Generate every prime number less than 100 using the sieve of eratosthenes method and copy it into the given range. Return the logical end of the new range.
+Generate every prime number less than 10000 using the sieve of eratosthenes method and copy it into the given range. Return the logical end of the new range.
 
 ### Example
 
 ```c++
-int primes[100]{};
+int primes[10000]{};
 
-unsigned end{sieve_100(primes, 0)};
+unsigned end{sieve_10000(primes, 0)};
 print(primes, 0, end); // -> 2 3 5 ...
 ```
 
@@ -107,10 +107,10 @@ Return the index of the first element in a **sorted** range that is **not** less
 ```c++
 int arr[]{1, 2, 3, 5, 6};
 
-lower_bound(arr, 0, 5, 4); // -? 3 (5 is NOT less than 4)
+lower_bound(arr, 0, 5, 4); // -> 3 (5 is NOT less than 4)
 ```
 
-### 04 - Bonus
+### Bonus
 
 Reimplement binary_search from class using lower_bound instead of upper_bound.
 

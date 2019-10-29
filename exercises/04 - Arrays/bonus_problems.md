@@ -56,7 +56,45 @@ print(arr, 0, 5); // -> 0 2 1 4 5
 // The exact order is not important be important
 ```
 
-## 03 - Lower Bound
+## 03 - Count Sort
+
+```c++
+void count_sort(int arr[], unsigned begin, unsigned end);
+```
+
+Given a range that only contains integers in the interval [0, 100), sort the range using the following method:
+- Count the occurences of every number in that interval
+- Copy the same amount of each number into the array in the correct order
+
+### Example
+
+```c++
+int arr[]{1, 0, 2, 2, 1};
+count_sort(arr, 0, 5);
+
+print(arr, 0, 5); // -> 0 1 1 2 2
+// Count 1 zero, 2 ones, 2 twos ...
+// Then write them into the array
+```
+
+## 04 - Sieve of Eratosthenes
+
+```c++
+unsigned sieve_100(int arr[], unsigned begin);
+```
+
+Generate every prime number less than 100 using the sieve of eratosthenes method and copy it into the given range. Return the logical end of the new range.
+
+### Example
+
+```c++
+int primes[100]{};
+
+unsigned end{sieve_100(primes, 0)};
+print(primes, 0, end); // -> 2 3 5 ...
+```
+
+## 05 - Lower Bound
 
 ```c++
 unsigned lower_bound(const int arr[], unsigned begin, unsigned end, int element);
@@ -76,7 +114,7 @@ lower_bound(arr, 0, 4); // -? 3 (5 is NOT less than 4)
 
 Reimplement binary_search from class using lower_bound instead of upper_bound.
 
-## 05 - is_set
+## 06 - is_set
 
 Let's define a **set** as a **sorted** range with no repeating elements.
 
@@ -98,7 +136,7 @@ is_set(not_set1, 0, 3); // -> false (has two 2s)
 is_set(not_set2, 0, 3); // -> false (not )
 ```
 
-## 06 - Unique
+## 07 - Unique
 
 ```c++
 unsigned unique(int arr[], unsigned begin, unsigned end);
@@ -115,7 +153,7 @@ unsigned end{unique(arr, 0, 7)};
 print(arr, 0, end); // -> 0 1 2 3
 ```
 
-## 07 - Inclusion
+## 08 - Inclusion
 
 ```c++
 bool includes(const int set_1[], unsigned begin_1, unsigned end_1,
@@ -138,7 +176,7 @@ includes(set_1, 0, 4,
          set_3, 0, 3); // -> false
 ```
 
-## 08 - Set Difference
+## 09 - Set Difference
 
 ### HINT: FOR THE SET OPERATIONS MIMIC THE MERGE ALGORITHM
 
@@ -164,7 +202,7 @@ unsigned end{set_difference(set_1, 0, 4,
 print(result, 0, end); // -> 1 3
 ```
 
-## 09 - Set Intersection
+## 10 - Set Intersection
 
 Same as above but intersection ...
 
@@ -182,7 +220,7 @@ unsigned end{set_intersection(set_1, 0, 4,
 print(result, 0, end); // -> 2 4
 ```
 
-## 10 - Set Symmetric Difference ...
+## 11 - Set Symmetric Difference ...
 
 You know the drill.
 
@@ -198,7 +236,7 @@ unsigned end{set_symmetric_difference(set_1, 0, 4,
 print(result, 0, end); // -> 1 3 5
 ```
 
-## 11 - Set Union
+## 12 - Set Union
 
 Hazard a guess
 

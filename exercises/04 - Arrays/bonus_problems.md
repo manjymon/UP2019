@@ -53,7 +53,7 @@ int arr[]{4, 0, 2, 1, 5};
 partition(arr, 0, 5, 3);
 
 print(arr, 0, 5); // -> 0 2 1 4 5
-// The exact order is not important be important
+// The exact order is not important
 ```
 
 ## 03 - Count Sort
@@ -107,10 +107,10 @@ Return the index of the first element in a **sorted** range that is **not** less
 ```c++
 int arr[]{1, 2, 3, 5, 6};
 
-lower_bound(arr, 0, 4); // -? 3 (5 is NOT less than 4)
+lower_bound(arr, 0, 5, 4); // -? 3 (5 is NOT less than 4)
 ```
 
-### Bonus
+### 04 - Bonus
 
 Reimplement binary_search from class using lower_bound instead of upper_bound.
 
@@ -129,7 +129,7 @@ Check if a given range is a **set**.
 ```c++
 int set[]{1, 2, 3};
 int not_set1[]{1, 2, 2};
-int not_set3[]{1, 2, 1};
+int not_set2[]{1, 2, 1};
 
 is_set(set, 0, 3); // -> true
 is_set(not_set1, 0, 3); // -> false (has two 2s)
@@ -230,7 +230,7 @@ int set_2[]{2, 4, 5};
 int result[10]{};
 
 unsigned end{set_symmetric_difference(set_1, 0, 4,
-                                      set_2, 0, 2,
+                                      set_2, 0, 3,
                                       result, 0)};
 
 print(result, 0, end); // -> 1 3 5
@@ -246,7 +246,7 @@ int set_2[]{2, 4, 5};
 int result[10]{};
 
 unsigned end{set_union(set_1, 0, 4,
-                       set_2, 0, 2,
+                       set_2, 0, 3,
                        result, 0)};
 
 print(result, 0, end); // -> 1 2 3 4 5

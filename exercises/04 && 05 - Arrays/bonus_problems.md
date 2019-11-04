@@ -1,4 +1,4 @@
-# 04 - Loops
+# 04 - Arrays
 
 ## Definitions for the exercise
 

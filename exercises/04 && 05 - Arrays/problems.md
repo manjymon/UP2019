@@ -237,7 +237,7 @@ Given a range, sort it using selection sort.
 
 ```c++
 int arr[]{1, 4, 3, 0, 2};
-selection_sort(arr);
+selection_sort(arr, 0, 5);
 print(arr, 0, 5); // -> 0 1 2 3 4
 ```
 
@@ -262,7 +262,7 @@ int res[6]{};
 
 unsigned size{merge(arr1, 0, 3,
                     arr2, 0, 3,
-                    res, 0);}
+                    res, 0)};
 
 print(res, 0, size); // -> 1 2 3 5 6 8
 ```

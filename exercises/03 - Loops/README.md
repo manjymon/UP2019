@@ -1,6 +1,6 @@
 # Ex03 - Loops
 
-Repeatedly execute a sereis of statements until a given condition is false
+Repeatedly execute a series of statements until a given condition is false
 
 - for
 - while

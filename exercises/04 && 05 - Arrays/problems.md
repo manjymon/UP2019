@@ -213,7 +213,7 @@ print(res, 0, size); // -> 0 1 2 3 4;
 ## 12 - Min Index
 
 ```c++
-unsigned min_index(const int arr[], unsigned begin, unsigned end);
+unsigned min_element(const int arr[], unsigned begin, unsigned end);
 ```
 
 Given a range find the index of the smallest element inside it.
@@ -222,7 +222,7 @@ Given a range find the index of the smallest element inside it.
 
 ```c++
 int arr[]{1, 4, 3, 0, 2};
-min_index(arr, 0, 5); // -> 3
+min_element(arr, 0, 5); // -> 3
 ```
 
 ## 13 - Selection Sort

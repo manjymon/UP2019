@@ -3,7 +3,13 @@
 
 bool is_prime(unsigned number)
 {
+    if (number < 2)
+    {
+        return false;
+    }
+
     unsigned limit = sqrt(number);
+
     for (unsigned i = 2; i <= limit; i++)
     {
         if (number % i == 0)

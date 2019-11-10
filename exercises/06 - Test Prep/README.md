@@ -57,7 +57,8 @@ largest_palindrome(); // 906609
 ## 04
 
 Given a positive epsilon and a x, calculate the following sum
-cos^3(x) = 1/4 Σ|from k=1 to inf| (-1)^k (3^(2k) + 3) / (2k)! * x ^ (2k)
+
+<img src="https://tex.s2cms.ru/svg/cos%5E3x%20%3D%20%5Cdfrac%7B1%7D%7B4%7D%5Csum_%7Bk%3D1%7D%5E%7B%5Cinfty%7D%20(-1)%5Ek%20%5Cdfrac%7B(3%5E%7B2k%7D%20%2B%203)%7D%7B(2k)!%7D%20*%20x%5E%7B2k%7D" alt="cos^3x = \dfrac{1}{4}\sum_{k=1}^{\infty} (-1)^k \dfrac{(3^{2k} + 3)}{(2k)!} * x^{2k}" />
 
 The summation must stop after 2 consecutive members of the sequence with difference <= eps have been added. 
 

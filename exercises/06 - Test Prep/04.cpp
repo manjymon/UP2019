@@ -14,7 +14,7 @@ double cos3(double x, double eps)
     double last_member{0};
     double sign{1};
     double power_of_3{1};
-    double factoriel{1};
+    double factorial{1};
     double power_of_x{1};
 
     for (unsigned k = 1; delta; k++)
@@ -22,10 +22,10 @@ double cos3(double x, double eps)
 
         sign *= -1;
         power_of_3 *= 9;
-        factoriel *= 2 * k * (2 * k - 1);
+        factorial *= 2 * k * (2 * k - 1);
         power_of_x *= x * x;
         
-        double next = sign * (power_of_3 + 3) / factoriel * power_of_x;
+        double next = sign * (power_of_3 + 3) / factorial * power_of_x;
         sum += next;
         delta = compare_doubles(next, last_member, eps);
         last_member = next;

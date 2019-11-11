@@ -17,6 +17,8 @@ Given a positive integer n, output the first n numbers that statisfy the followi
 - The difference between the smallest and the largest digit in the number is 3
 - The sum of the digits of the number is prime
 
+Then return the sum of these numbers
+
 ### Example
 ```c++
 std::cout << sum_1(5) << "\n-------\n";
@@ -31,7 +33,7 @@ std::cout << sum_2(10) << '\n';
 146
 -------
 2
-4
+3
 5
 7
 11
@@ -117,7 +119,7 @@ Given 2 natural numbers p and k, Find the smallest natural number, bigger than p
 ### Example
 
 ```c++
-find_smallest_cube_sum(100, 1); // 188
+find_smallest_cube_sum(100, 1); // 189
 ```
 
 ## 09

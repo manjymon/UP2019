@@ -3,6 +3,11 @@
 
 unsigned digits_diff(unsigned number)
 {
+    if (!number)
+    {
+        return 0;
+    }
+
     unsigned min{9};
     unsigned max{0};
 

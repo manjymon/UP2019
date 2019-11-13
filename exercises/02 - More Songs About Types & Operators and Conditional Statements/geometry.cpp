@@ -69,8 +69,8 @@ PointToFigureRelation get_relation_to_rectangle(double x_bottom, double y_bottom
 {
     double delta_x_bottom{compare_doubles(x_point, x_bottom, EPSILON)};
     double delta_x_top{compare_doubles(x_point, x_top, EPSILON)};
-    double delta_y_bottom{compare_doubles(y_point, y_top, EPSILON)};
-    double delta_y_top{compare_doubles(y_point, y_bottom, EPSILON)};
+    double delta_y_bottom{compare_doubles(y_point, y_bottom, EPSILON)};
+    double delta_y_top{compare_doubles(y_point, y_top, EPSILON)};
 
     if (delta_x_bottom > 0 && delta_x_top < 0 && delta_y_bottom > 0 && delta_y_top < 0)
     {

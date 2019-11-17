@@ -55,7 +55,7 @@ int main()
     char lower_case_input[256];
     char upper_case_input[256];
 
-    std::cin.getline(input, 256);
+    std::cin.getline(input, 255);
     separate_string(input, lower_case_input, upper_case_input);
 
     std::cout << (lower_to_upper_str_cmp(lower_case_input, upper_case_input) ? "Yes" : "No") << '\n';

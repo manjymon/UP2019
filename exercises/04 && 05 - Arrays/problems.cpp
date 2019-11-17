@@ -143,7 +143,7 @@ unsigned merge(const int input_1[], unsigned begin_1, unsigned end_1,
         }
     }
 
-    copy(input_1, begin_1, end_1, output, output_begin);
+    output_begin = copy(input_1, begin_1, end_1, output, output_begin);
     return copy(input_2, begin_2, end_2,
                 output, output_begin);
 }

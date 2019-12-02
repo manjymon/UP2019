@@ -1,4 +1,4 @@
-# 08 - Matrices
+# 09 - Recursion
 
 ```c++
 const unsigned max_size{100};
@@ -7,7 +7,7 @@ const unsigned max_size{100};
 ## 01 - Factorial
 
 ```c++
-unsigned factorial(int n)
+unsigned factorial(unsigned n)
 ```
 
 Write a recursive function that calculatest n!
@@ -22,7 +22,7 @@ factorial(0); // 1
 ## 02 - Fibonacci
 
 ```c++
-unsigned fib(n)
+unsigned fib(unsigned n)
 ```
 
 ### Notes:
@@ -55,7 +55,11 @@ exp(2, 10); // 1024
 int sum(const int* begin, const int* end)
 ```
 
-Write a recursive function that sums the elements of a range
+Write a recursive function that sums the elements of a range.
+
+### HINT
+
+Head & Tail
 
 ### Example
 
@@ -67,7 +71,9 @@ sum(std::begin(arr), std::end(arr)); // 15
 ## 05 - DFS
 
 ```c++
-bool path(bool arr[][max_size], unsigned height, unsigned width, int x_source, int y_source, int x_target, int y_target)
+bool path(bool arr[][max_size], unsigned height, unsigned width,
+          int x_source, int y_source,
+          int x_target, int y_target)
 ```
 
 Given a height x width boolean matrix that represents a labyrinth, where false means passable and true means unpassable. Check if their is a valid path between (x_source, y_source) and (x_target, y_targer).
@@ -79,7 +85,7 @@ Given a height x width boolean matrix that represents a labyrinth, where false m
 ### Example
 
 ```c++
-int grid[][max_size]{
+bool grid[][max_size]{
     {0, 0, 0, 0},
     {0, 0, 1, 0},
     {1, 1, 1, 1},
@@ -97,7 +103,6 @@ void flood_fill(int screen[][max_size], unsigned height, unsigned width, unsigne
 ```
 
 Given a height x width int matrix representing a screen in MS Paint, where a different number indicates a different color. Implement the paint bucket tool.
-
 
 ### Example
 

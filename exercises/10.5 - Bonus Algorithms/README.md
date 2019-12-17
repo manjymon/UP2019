@@ -33,7 +33,8 @@ Given a range, change it to the next possible (in lexicographical order) permuta
 ```c++
 int arr[]{1, 2, 3};
 
-do {
+do
+{
     for (int num : arr)
     {
         std::cout << num << ' ';
@@ -158,7 +159,7 @@ Approximate the value of PI using a Monte Carlo algorithm
  - Consider a circle with center (0.5, 0.5) and radius 0.5 inside it
  - Generate *attempts* number of points **inside** the square
  - Count the amount of points that are also inside the circle
- - The ratio between the points inside the circle and all points should be PI / 4
+ - The ratio between the points inside the circle and all points should be approximately PI / 4
 
 #### Example
 

@@ -93,7 +93,7 @@ Given a string output the number of occurences for every English letter. Treat l
 ### Example
 
 ```c++
-std::cout << alpha_count("aBAbccD!Z");
+alpha_count("aBAbccD!Z");
 /*
     a: 2
     b: 2

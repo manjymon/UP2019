@@ -23,14 +23,14 @@ bool is_sorted(int * first, int * last)
     return *first <= *(first + 1) && is_sorted(first + 1, last);
 }
 
-bool equal_range(int * first1, int * last1, int * first2)
+bool equal(int * first1, int * last1, int * first2)
 {
     if (first1 == last1)
     {
         return true;
     }
     
-    return *first1 == *first2 && equal_range(first1 + 1, last1, first2 + 1);
+    return *first1 == *first2 && equal(first1 + 1, last1, first2 + 1);
 }
 
 int * min_element(int * first, int * last)
@@ -85,8 +85,8 @@ int main()
     int sarr[]{1, 2, 3, 4, 5};
     std::cout << std::boolalpha << is_sorted(std::begin(sarr), std::end(sarr)) << std::endl;
     
-    std::cout << std::boolalpha << equal_range(std::begin(arr), std::end(arr), std::begin(sarr)) << std::endl
-                                << equal_range(std::begin(sarr), std::end(sarr), std::begin(sarr)) << std::endl;
+    std::cout << std::boolalpha << equal(std::begin(arr), std::end(arr), std::begin(sarr)) << std::endl
+                                << equal(std::begin(sarr), std::end(sarr), std::begin(sarr)) << std::endl;
 
     std::cout << *min_element(std::begin(arr), std::end(arr)) << std::endl;
     

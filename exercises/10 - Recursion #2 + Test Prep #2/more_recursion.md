@@ -15,7 +15,7 @@ bool is_sorted(int * begin, int * end)
 ## 03 - Equal Range
 
 ```c++
-bool equal_range(int * begin1, int * end1, int * begin2)
+bool equal(int * begin1, int * end1, int * begin2)
 ```
 
 ## 04 - Min Element

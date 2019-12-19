@@ -56,8 +56,8 @@ int main()
     int b[]{1, 2, 1};
     int c[]{1, 2, 2};
     
-    std::cout << std::boolalpha << permutationrec(a, b, 3) << '\n'  // false
-                                << permutationrec(a, c, 3) << '\n'; // true
+    std::cout << std::boolalpha << permutationrec(a, b, 3) << '\n'  // true
+                                << permutationrec(a, c, 3) << '\n'; // false
 
     return 0;
 }

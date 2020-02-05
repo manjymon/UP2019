@@ -1,7 +1,7 @@
 #include <iostream>
 
 // Change this to 2 for var2
-const unsigned BASE{2};
+const unsigned BASE{10};
 
 unsigned count_digits(unsigned i)
 {

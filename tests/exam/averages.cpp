@@ -31,7 +31,7 @@ int main()
         {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
     };
 
-    const double * averages{average(matrix, 3)};
+    const double * averages{average(matrix, 3)}; // {1, 1.5, 5.5}
 
     for (unsigned i{0}; i < 3; ++i)
     {

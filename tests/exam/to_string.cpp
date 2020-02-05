@@ -32,7 +32,7 @@ unsigned count_digits(unsigned i)
 
 int main()
 {
-    const char * num_str{to_string(1024)};
+    const char * num_str{to_string(1024)}; // "1024"
 
     std::cout << num_str << '\n';
 

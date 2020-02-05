@@ -43,7 +43,7 @@ void backwards_rec(const char * begin, const char * end)
 
 int main()
 {
-    backwards("i love programming with cpp");
+    backwards("i love programming with cpp"); // "cpp with programming love i"
     std::cout << '\n';
 
     return 0;

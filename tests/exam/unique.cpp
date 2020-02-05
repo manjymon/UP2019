@@ -40,7 +40,7 @@ unsigned count_if_true(const bool * begin, const bool * end)
 
 int main()
 {
-    const char * result{unique("I love programming with cpp")};
+    const char * result{unique("I love programming with cpp")};  // "I loveprgaminwthc"
     std::cout << result << '\n';
 
     delete [] result;

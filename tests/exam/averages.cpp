@@ -2,7 +2,7 @@
 
 double average(const double * begin, const double * end)
 {
-    long size{end - begin};
+    ptrdiff_t size{end - begin};
     double sum{0};
     for (; begin != end; ++begin)
     {

@@ -12,7 +12,7 @@ unsigned count_if_true(const bool * begin, const bool * end)
     return count;
 }
 
-/* const */ char * unique(const char * s)
+/*const*/ char * unique(const char * s)
 {
     bool char_set[256]{};
 

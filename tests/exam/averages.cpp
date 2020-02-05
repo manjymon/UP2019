@@ -12,7 +12,7 @@ double average(const double * begin, const double * end)
     return sum / size;
 }
 
-double * average(/*const*/ double A[][10], unsigned rows)
+/*const*/ double * average(/*const*/ double A[][10], unsigned rows)
 {
     double * averages{new double[rows]};
     for (unsigned i{0}; i < rows; ++i)
@@ -31,7 +31,7 @@ int main()
         {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
     };
 
-    double * averages{average(matrix, 3)};
+    const double * averages{average(matrix, 3)};
 
     for (unsigned i{0}; i < 3; ++i)
     {

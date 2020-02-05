@@ -11,7 +11,7 @@ void print_range(const char * begin, const char * end)
 
 const char * find_last_word(const char * begin, const char * end)
 {
-    for (--end; end != begin; --end)
+    for (--end; end > begin; --end)
     {
         if (*end == ' ')
         {
